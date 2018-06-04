@@ -10,6 +10,7 @@
 
     <b-navbar-nav>
       <b-nav-item href="#" @click="p1()">Link</b-nav-item>
+      <b-nav-item href="#" @click="uf()">Upload</b-nav-item>
       <b-nav-item href="#" disabled>Disabled</b-nav-item>
     </b-navbar-nav>
 
@@ -53,6 +54,9 @@ export default {
     },
     home () {
       this.$router.push({path: '/'})
+    },
+    uf () {
+      this.$router.push({path: 'upfile'})
     }
   }
 }
