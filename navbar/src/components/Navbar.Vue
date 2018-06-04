@@ -19,7 +19,8 @@ export default {
       items: [],
       currentPage: 1,
       perPage: 7,
-      totalRows: 0
+      totalRows: 0,
+      filter: null
     }
   },
   mounted () {
