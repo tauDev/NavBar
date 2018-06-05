@@ -18,24 +18,26 @@ export default {
       msg: ''
     }
   },
-  methods:{
-    submitFile(){
-        let formData = new FormData()
-        formData.append('file',this.file)
-        axios.post('http://192.168.0.124:3000/upload',
-        formData,{
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }).then(function(){
-            alert("SUCCESS!!")
-            console.log('SUCCESS!!')
-        }).catch(function(){
-            console.log('FAILURE!!')
+  methods: {
+    submitFile () {
+      let formData = new FormData()
+      formData.append('file', this.file)
+      axios.post('http://192.168.0.124:3000/upload',
+        formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        })
+        .then(function () {
+          alert('SUCCESS!!')
+          console.log('SUCCESS!!')
+        })
+        .catch(function () {
+          console.log('FAILURE!!')
         })
     },
-    handleFileUpload(){
-        this.file = this.$refs.file.files[0]
+    handleFileUpload () {
+      this.file = this.$refs.file.files[0]
     }
   }
 }
